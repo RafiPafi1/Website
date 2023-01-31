@@ -2,6 +2,7 @@
 <html>
   <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>About me</title>
     <style>
       section{
@@ -16,6 +17,7 @@
         <a href="#intro" class="navbar-brand">
           <span class="fw-bold text-warning">
             About me
+            <i class="bi bi-emoji-smile"></i>
           </span>
         </a>
     <!-- Mobile screen toggle button -->
@@ -65,49 +67,123 @@
 <!-- project section-->
       <section id="projects">
         <div class="container-fluid border border-3 border-success bg-light">
-          <div class="row justify-content-start">
-            <div class="col-md-6  text-start">
-              <h1>
-                <div class="display-2">Projects</div>
-              </h1>
-              <p class="lead text-primary">Here are a my current projects:</p>
-              <ul class="Projects">
-                <li class="project-item">
-                  <p>This website</p>
-                </li>
-                <li class="project-item">
-                  <p>Go back to game dev?</p>
-                </li>
-              </ul>
+          <div class="text-center">
+            <h2 class="display-2">Projects</h2>
+            <p class="lead text-primary">Here are a my current projects:</p>
+          </div>
+          
+          <div class="row my-4 g-0 justify-content-around ">
+            <div class="col-4 col-lg-1">
+              <img src="assets/projects.png" class="img-fluid" alt="project picture">
+              </div>
+              <!-- accordion -->
+              <div class="col-5 col-lg-7">
+                <div class="accordion" id="Projects">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="header-1">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#project-1"
+                      aria-expanded="true" aria-controls="project-1">
+                        This portfolio website
+                      </button>
+                    </h2>
+                    <div id="project-1" class="accordion-collapse collapse show" aria-labelledby="project-1" data-bs-parent="#Projects">
+                      <div class="accordion-body">
+                        <p>This is my portfolio website and I'm constantly trying to make it better with new skills I learn each day.
+                          As a right now I'm working on adding a bootstrap to this website but soon I will have a java script as well.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="header-2">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#project-2"
+                      aria-expanded="true" aria-controls="project-2">
+                        Work on the new website for CSO (Computer Science Organization)
+                      </button>
+                    </h2>
+                    <div id="project-2" class="accordion-collapse collapse" aria-labelledby="project-2" data-bs-parent="#Projects">
+                      <div class="accordion-body">
+                        <p>Computer Science Organization is a club in the East Stroudsburg University. I'm a member of that club and this year
+                          we decided to upgrade our website to a new one. We do not know yet when the project will be done or ready to publish.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="header-3">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#project-3"
+                      aria-expanded="true" aria-controls="project-3">
+                        Possibly go back to some game dev?
+                      </button>
+                    </h2>
+                    <div id="project-3" class="accordion-collapse collapse" aria-labelledby="project-1" data-bs-parent="#Projects">
+                      <div class="accordion-body">
+                        <p>Back in 2018 I made a simple 2-D platformer and it was a lot of fun. I was a bit upset when I lost the project,
+                          which made me kind of gave up on trying to make a new prject. Maybe when I get some free time this year I will try it again.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
     </section>
 
 
     <!-- contact me section-->
     <section id="contact">
       <div class="container-fluid border border-3 border-primary bg-light">
-        <div class="row justify-content-start">
-          <div class="col-md-6  text-start">
-            <h1>
-              <div class="display-2">Contact me</div>
-            </h1>
-            <p class="lead text-primary">Leave your name, mesage and your email (will have that working in future</p>
-            <ul class="Forms">
-              <li class="form-item">
-                <p>Name:</p>
-              </li>
-              <li class="form-item">
-                <p>Last name</p>
-              </li>
-              <li class="form-item">
-                <p>Message:</p>
-              </li>
-              <li class="form-item">
-                <p>Email:</p>
-              </li>
-            </ul>
+        <div class="text-center">
+          <h2 class="display-2">Contact me</h2>
+          <p class="lead text-primary">Let me know if you have any ideas that I could add to my website 
+            or if you need help with something</p>
+        </div>
+        <div class="row justify-content-center my-4">
+          <div class="col-lg-6">
+            <form>
+              <label for="email" class="form-label">Email Address:</label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-envelope-at"></i>
+                </span>
+                <input type="email" class="form-control" id="email" placeholder="e.g. rafal@example.com">
+              </div>
+              
+              <label for="name" class="form-label">Name:</label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-person-circle"></i>
+                </span>
+                <input type="text" class="form-control" id="name" placeholder="e.g. Rafal">
+              </div>
+              
+              <label for="subject" class="form-label">Reason for contacting me</label>
+              <div class="mb-4 input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-question-diamond-fill"></i>
+                </span>
+                <select class="form-select" id="subject">
+                  <option value="content" selected>Content Idea</option>
+                  <option value="question">Question for me</option>
+                  <option value="help">Help needed</option>
+                </select>
+              </div>
+              
+              <div class="form-floating mb-4 mt-4">
+                <textarea id="query" class="form-control" style="height: 200px"></textarea>
+                <label for="query" class="form-label">Your query...</label>
+              </div>
+
+              <div class="mb-4 text-center">
+                <button type="submit" class="btn btn-secondary">Submit</button>
+              </div>
+
+
+            </form>
+          
           </div>
         </div>
       </div>
