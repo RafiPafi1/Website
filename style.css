@@ -1,0 +1,67 @@
+*{
+    font-family: Helvetica;
+    background-color: peachpuff;
+    overflow: scroll;
+}
+title{
+    text-align: center;
+}
+#links{
+    text-align: center;
+    font-size: 25px;
+    font-family:Georgia;
+    border: 1px solid white;
+    display: inline;
+    padding: 10px 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+}
+#links li{
+    position: relative;
+    bottom: 0;
+    left: 2;
+    border:3px solid purple;
+    background-color:aquamarine;
+    display: inline-block;
+    padding: 5px 5px;
+}
+figure{
+    opacity: 75%;
+}
+h2{
+    color:green;
+}
+.intro p{
+    border: 2px solid blue;
+    border-radius: 15px;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    padding: 10px 10px;
+}
+figcaption{
+    position: relative;
+    padding-bottom:60px;
+    margin-bottom:60px;
+}
+a:link, a:visited{
+    color: purple;
+    background-color: aquamarine;
+    text-align:center;
+    display:inline-block;
+    text-decoration: none;
+}
+.codecademy{
+    border: 2px solid blue;
+    border-radius: 15px;
+    display: inline-block;
+    position: relative;
+    padding: 10px 10px;
+}
+.about{
+    text-align: center;
+}
+
