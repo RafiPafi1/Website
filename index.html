@@ -150,6 +150,12 @@
                   <i class="bi bi-envelope-at"></i>
                 </span>
                 <input type="email" class="form-control" id="email" placeholder="e.g. rafal@example.com">
+                <!-- Tooltip -->
+                <span class="input-group-text">
+                  <span class="tt" data-bs-placement="bottom" title="Enter an email address I can reply to.">
+                  <i class="bi bi-question-circle text-muted"></i>
+                  </span>
+                </span>
               </div>
               
               <label for="name" class="form-label">Name:</label>
@@ -158,6 +164,12 @@
                   <i class="bi bi-person-circle"></i>
                 </span>
                 <input type="text" class="form-control" id="name" placeholder="e.g. Rafal">
+                <!-- Tooltip -->
+                <span class="input-group-text">
+                  <span class="tt" data-bs-placement="bottom" title="Should be self explanatory :)">
+                  <i class="bi bi-question-circle text-muted"></i>
+                  </span>
+                </span>
               </div>
               
               <label for="subject" class="form-label">Reason for contacting me</label>
@@ -187,7 +199,13 @@
           </div>
         </div>
       </div>
-  </section>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script>
+      const tooltips = document.querySelectorAll('.tt')
+      tooltips.forEach(t => {
+        new bootstrap.Tooltip(t)
+      })
+    </script>
   </body>
 </html>
