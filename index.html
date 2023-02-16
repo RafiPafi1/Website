@@ -9,6 +9,7 @@
         padding: 50px 0;
       }
     </style>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -72,7 +73,7 @@
             <p class="lead text-primary">Here are a my current projects:</p>
           </div>
           
-          <div class="row my-4 g-0 justify-content-around ">
+          <div class="row my-4 g-0 justify-content-around align-items-center">
             <div class="col-4 col-lg-1">
               <img src="assets/projects.png" class="img-fluid" alt="project picture">
               </div>
@@ -141,9 +142,10 @@
           <p class="lead text-primary">Let me know if you have any ideas that I could add to my website 
             or if you need help with something</p>
         </div>
+        <div id="error"></div>
         <div class="row justify-content-center my-4">
           <div class="col-lg-6">
-            <form>
+            <form id="form" method="get">
               <label for="email" class="form-label">Email Address:</label>
               <div class="mb-4 input-group">
                 <span class="input-group-text">
