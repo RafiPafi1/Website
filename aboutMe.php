@@ -1,30 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <title>Know me better</title>
-    <script defer src="script.js"></script>
-  </head>
-  <body>
+
+<head>
     <?php
-    include 'navbar.php';
-    ?>
+  include 'head.php';
+  ?>
+    <title>Know me better</title>
+    <style>
+    #map {
+        height: 400px;
+        width: 400px;
+    }
+    </style>
+</head>
+
+<body class="bg-success text-dark bg-opacity-25">
+    <?php
+  include 'navbar.php';
+  ?>
     <h1 class="text-center fw-bold text-info">Welcome to my website</h1>
-    
-    <div>
-      <h2 class="h3 display-8">This is a welcoming page!</h2>
-      <p class="lead">This is my first step of learning (it will be updated with some time>                                 </p>
-      <p class="lead">This is a home page of this website. It's just a raw HTML it will look better in some time.</p>
-      <p class="text-decoration-underline text-danger"> Now it contains a simple css :) with start of bootstrap go to about me page to see my progress</p>
+    <div class="container-lg text-center">
+        
+        <div class="row align-items-center my-4 text-danger">
+            <div class="col">
+                <p class="lead">My name is Rafal, and I'm originally from Poland. I was born in a small city called
+                    Rzeszów, where
+                    I spent 16 years of my life. In the summer of 2016 my family finally got a visa after a long waiting
+                    for it and was able to come into the United States. In the United States, I was able to take a look
+                    at a new life, which was being in my first programming class back in my high school.
+                </p>
+            </div>
+            <div class="col">
+                <div id="map"></div>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col">
+                    <img src="assets/ESU.png" class="img-fluid">
+            </div>
+            <div class="col">
+                <p class="lead">Throughout those years I was able to learn more about java and choose my future major.
+                    From there I decided to continue
+                    my learning at the East Stroudsburg University where I proceeded with dual majoring in computer
+                    science and computer security.
+                </p>
+            </div>
+            <div class="row align-items-center" >
+                <div class="col">
+                    <p class="lead"> Now I am working on my internship at the company called Marathon Studios and this
+                        is my first learning project.
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="assets/Marathon-Globe.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <!--<div class="card">
+          <div class="card-body">
+            <p class="lead">My name is Rafal and I'm originally from Poland. I was born in a small city called Rzeszow, where I spent
+              16 years of my life. In summer of 2016 my family after a long waiting finally got a visa ad was able to come into the United States.
+              In the United States, he was able to take a look at a new life, which was being in my first programming class back in my highschool.
+            </p>
+            <p class="lead">Throughout those years I was able to learn more about java and choose my future major. From there I decided to continue
+              my learning at the East Stroudsburg University where I proceeded with dual majoring in computer science and computer security.
+
+            </p>
+            <p class="text-decoration-underline text-danger"> Now it contains a simple css :) with start of bootstrap go to about me page to see my progress</p>
+          </div>
+        </div>-->
     </div>
-    <figure>
-        <img src="https://www.pushengage.com/wp-content/uploads/2022/02/Best-Website-Welcome-Message-Examples.png" alt="This is my welcome sign!">
-    </figure>
     <br>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  </body>
+    <script>
+    function initMap() {
+        var location = {
+            lat: 50.038,
+            lng: 22.004
+        };
+        var map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 6,
+            center: location
+        });
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+    }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxB2CLeD5xLxhTSxMqucFqr7ZccipYhCw&callback=initMap">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+</body>
+
 </html>
