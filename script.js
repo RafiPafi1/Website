@@ -18,6 +18,8 @@ form.addEventListener("submit", (el) => {
 
   if (messages.length > 0) {
     error.innerText = messages.join(", ");
+  } else {
+    el.currentTarget.submit();
   }
 });
 const tooltips = document.querySelectorAll(".tt");
