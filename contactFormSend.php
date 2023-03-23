@@ -9,12 +9,26 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
-    
+    $name = $_POST['name'];
     $email = $_POST['email'];
     $subject = $_POST["subject"];
     $message = $_POST["message"];
    
 }
+
+$conn = new mysqli('localhost','root','','contactform');
+if($conn->connect_error){
+    die('Connection Failed : ' . $conn->connect_error);
+}else{
+    $stmt = $conn->prepare("INSERT INTO visitors(name,email,subject,message)values(?,?,?,?)");
+    $stmt->bind_param("ssss",$name,$email,$subject,$message);
+    $stmt->execute();
+    echo "Data base updated successfully";
+    $stmt->close();
+    $conn->close(); 
+}
+
+
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 try {
