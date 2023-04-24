@@ -1,6 +1,12 @@
+<?php 
+include 'dbConnect.php';
+$sql = "SELECT * FROM `projects`";
+$all_projects = mysqli_query($conn, $sql);
+$num_results = mysqli_num_rows($all_projects);
+?>
+
 <!DOCTYPE html>
 <html>
-
 <head>
     <?php
     include 'head.php';
@@ -53,67 +59,38 @@
                     <!-- accordion -->
                     <div class="col-5 col-lg-7">
                         <div class="accordion" id="Projects">
+                        <?php 
+                            $i = 1;
+                                        for($x=0; $x<$num_results; $x++) {
+                                            $row = mysqli_fetch_assoc($all_projects);
+                                         
+                                        ?>
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="header-1">
+                                <h2 class="accordion-header" id="header-<?php echo $i;?>">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#project-1" aria-expanded="true" aria-controls="project-1">
-                                        This portfolio website
+                                        data-bs-target="#project-<?php echo $i;?>" aria-expanded="true" aria-controls="project-<?php echo $i;?>">
+                                        
+                                        <?php 
+                                        //Displays a project Title in accordion-item
+                                        print $row['projTitle']; 
+                                        
+                                        ?>
+                                        
                                     </button>
                                 </h2>
-                                <div id="project-1" class="accordion-collapse collapse show" aria-labelledby="project-1"
+                                <div id="project-<?php echo $i;?>" class="accordion-collapse collapse <?php if($i == 1) {echo 'show';}?>" aria-labelledby="project-<?php echo $i;?>"
                                     data-bs-parent="#Projects">
                                     <div class="accordion-body">
-                                        <p>This is my portfolio website, and I'm constantly trying to make it better
-                                            with new skills I learn each day.
-                                            This page is mainly about my projects. There are currently 2 more pages,
-                                            being: welcome page and contact me page.
-                                            Currently, I'm working on implementing a PHP and more JavaScript with
-                                            jQuery.
-                                        </p>
+                                    <?php 
+                                    //Displays a description of a project
+                                    print $row['projDescription']; 
+                                    ?>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="header-2">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#project-2" aria-expanded="true" aria-controls="project-2">
-                                        Work on the new website for CSO (Computer Science Organization)
-                                    </button>
-                                </h2>
-                                <div id="project-2" class="accordion-collapse collapse" aria-labelledby="project-2"
-                                    data-bs-parent="#Projects">
-                                    <div class="accordion-body">
-                                        <p>Computer Science Organization is a club in the East Stroudsburg University.
-                                            I'm a member of that club and this year
-                                            we have decided to upgrade our website to a new brand new one. We do not
-                                            know yet when the project will be done or ready to
-                                            publish. Unfortunately due to some college rules we might not be able to
-                                            publish the final project, but it will still be a valuable skill to learn.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="header-3">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#project-3" aria-expanded="true" aria-controls="project-3">
-                                        Possibly go back to some game dev?
-                                    </button>
-                                </h2>
-                                <div id="project-3" class="accordion-collapse collapse" aria-labelledby="project-1"
-                                    data-bs-parent="#Projects">
-                                    <div class="accordion-body">
-                                        <p>Back in 2018 I have made a simple 2-D platformer game, which was a lot of
-                                            fun. I was a bit upset when I lost the project files,
-                                            which made me give up on trying to make a new project. Maybe when I get some
-                                            free time this year I will try it again, especially since Godot 4.0 will be
-                                            out.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php 
+                            $i++;
+                        } ?>
                         </div>
                     </div>
                 </div>

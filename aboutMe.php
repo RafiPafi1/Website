@@ -48,7 +48,8 @@
             <div class="row align-items-center" >
                 <div class="col">
                     <p class="lead"> Now I am working on my internship at the company called Marathon Studios and this
-                        is my first learning project.
+                        is my
+                        first learning project.
                     </p>
                 </div>
                 <div class="col">
@@ -56,19 +57,10 @@
                 </div>
             </div>
         </div>
-        <!--<div class="card">
-          <div class="card-body">
-            <p class="lead">My name is Rafal and I'm originally from Poland. I was born in a small city called Rzeszow, where I spent
-              16 years of my life. In summer of 2016 my family after a long waiting finally got a visa ad was able to come into the United States.
-              In the United States, he was able to take a look at a new life, which was being in my first programming class back in my highschool.
-            </p>
-            <p class="lead">Throughout those years I was able to learn more about java and choose my future major. From there I decided to continue
-              my learning at the East Stroudsburg University where I proceeded with dual majoring in computer science and computer security.
-
-            </p>
-            <p class="text-decoration-underline text-danger"> Now it contains a simple css :) with start of bootstrap go to about me page to see my progress</p>
-          </div>
-        </div>-->
+        <!-- google calendar when I want to add a schedule part to this website
+        <div>
+        <iframe src="https://calendar.google.com/calendar/embed?src=rafix123.rp%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></-iframe>
+        <div-->
     </div>
     <br>
     <script>
