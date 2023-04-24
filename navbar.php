@@ -17,7 +17,7 @@
             <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="aboutMe.php">Welcome Page</a>
+                        <a class="nav-link" href="aboutMe.php">About me</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Projects</a>
@@ -25,11 +25,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contactMe.php">Contact me</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="adminLogin.php">Admin Login Page</a>
+                    </li>
                 </ul>
-                <!--form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form-->
             </div>
         </div>
     </nav>

@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
    
 }
 
-$conn = new mysqli('localhost','root','','contactform');
+$conn = new mysqli('localhost','root','','portfolioDB');
 if($conn->connect_error){
     die('Connection Failed : ' . $conn->connect_error);
 }else{
